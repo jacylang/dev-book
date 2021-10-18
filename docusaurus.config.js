@@ -9,7 +9,7 @@ const config = {
   title: 'Jacy DevBook',
   tagline: 'Sweet Home',
   url: 'https://jacylang.github.io/dev-book',
-  baseUrl: '/',
+  baseUrl: '/dev-book',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
