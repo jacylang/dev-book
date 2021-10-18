@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # User Guide
 
 **This is a WIP quick overview of _Jacy_**

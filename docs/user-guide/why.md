@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Why?
 
 This is a collection of answers to all "Why's?", it contains obvious question I'd like to include to user-guide to help newcomers, but also here would likely be complex question about how the compiler works.

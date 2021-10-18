@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: How To Run
+---
+
 # How to run
 
 ## Basic usage

@@ -1,2 +1,2 @@
-# Compilation Workflow
+# Compiler Workflow
 
