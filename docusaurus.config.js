@@ -9,7 +9,7 @@ const config = {
   title: 'Jacy DevBook',
   tagline: 'Sweet Home',
   url: 'https://jacylang.github.io/dev-book',
-  baseUrl: '/dev-book',
+  baseUrl: '/dev-book/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -52,14 +52,19 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'index',
             position: 'left',
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/jacylang/jacy',
+            label: 'Jacy on GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/jacylang/dev-book',
+            label: 'DevBook GitHub',
             position: 'right',
           },
         ],
@@ -71,8 +76,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Docs',
+                to: '/docs/index',
               },
             ],
           },
@@ -81,15 +86,7 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/jacy',
               },
             ],
           },
@@ -107,7 +104,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Jacy DevBook, JacyLang team.`,
       },
       prism: {
         theme: lightCodeTheme,
