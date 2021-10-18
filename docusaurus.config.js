@@ -28,7 +28,7 @@ const config = {
           editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
