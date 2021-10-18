@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Jacy DevBook',
   tagline: 'Sweet Home',
-  url: 'https://jacylang.github.io/dev-book',
+  url: 'https://jacylang.github.io',
   baseUrl: '/dev-book/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
