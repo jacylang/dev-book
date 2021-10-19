@@ -3,15 +3,15 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.banner)}>
       <div className="container">
-        <h1 className="title">{siteConfig.title}</h1>
-        <p className="tagline">{siteConfig.tagline}</p>
+        <h1 className="title" className={clsx(styles.header__title)}>{siteConfig.title}</h1>
+        <p className="tagline" className={clsx(styles.header_tagline)}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
