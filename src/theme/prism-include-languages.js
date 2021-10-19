@@ -20,6 +20,8 @@ const prismIncludeLanguages = (PrismObject) => {
 
     require('@jacy-lang/prism-jacy');
 
+    Prism.languages.jc = Prism.languages.jacy;
+
     delete window.Prism;
   }
 };
