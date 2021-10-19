@@ -11,7 +11,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.banner)}>
       <div className="container">
         <h1 className="header__title" className={clsx(styles.header__title)}>{siteConfig.title}</h1>
-        <p className="header_tagline" className={clsx(styles.header_tagline)}>{siteConfig.tagline}</p>
+        <p className="header__tagline" className={clsx(styles.header__tagline)}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
