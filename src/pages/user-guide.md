@@ -71,6 +71,7 @@ This table also includes expressions that are not operator expressions, anyway, 
 The table is from high to low precedence ordered -- the operators in the first row have the strongest precedence.
 
 | Precedence index | Operator groups / expressions | Associativity |
+| ---------------- | ----------------------------- | ------------- |
 |  | Paths (`::`) | N/A |
 |  | Field expression (aka member access - `a.b`) | left to right |
 |  | Invocations (aka calls - `a(...)`), array access (aka indexing - `a[...]`) | N/A |
