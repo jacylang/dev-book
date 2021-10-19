@@ -19,13 +19,16 @@
 .header__title {
   width: max-content;
   margin: 0 auto;
+  padding: 5px;
+  color: #fff;
   font-family: 'Courgette', cursive;
+  box-shadow: 0 1px #fffa;
 }
 
 .header__tagline {
   width: max-content;
-  margin: 0 auto;
-  box-shadow: 0 -1px #fffa;
+  margin: 10px auto;
+  color: #fff;
 }
 
 @media screen and (max-width: 966px) {
