@@ -70,28 +70,28 @@ This table also includes expressions that are not operator expressions, anyway, 
 
 The table is from high to low precedence ordered -- the operators in the first row have the strongest precedence.
 
-| Precedence index | Operator groups / expressions | Associativity |
-| ---------------- | ----------------------------- | ------------- |
-|  | Paths (`::`) | N/A |
-|  | Field expression (aka member access - `a.b`) | left to right |
-|  | Invocations (aka calls - `a(...)`), array access (aka indexing - `a[...]`) | N/A |
-|  | [Postfix operators] `?` | N/A |
-|  | [Prefix operators] `!`, `&`, `&mut`, `-`, `*` | N/A |
-|  | `as` | left |
-|  | `*` `/` `%` | left |
-|  | `+` `-` | left |
-|  | `..` `..=` | Non-associative |
-|  | `<<` `>>` | left |
-|  | `&` (infix) | left |
-|  | `^` | left |
-|  | `|` | left |
-|  | `in` | Non-associative |
-|  | `<=>` | Non-associative |
-|  | `<` `>` `<=` `=>` | Non-associative |
-|  | `==` `!=` | Non-associative |
-|  | `and` | left |
-|  | `or` | left |
-|  | `=` `+=` `-=` `*=` `/=` `%=` `&=` `|=` `^=` `<<=` `>>=` | left |
+|  N  | Operator groups / expressions | Associativity |
+| --- | ----------------------------- | ------------- |
+| 20  | Paths (`::`) | N/A |
+| 19  | Field expression (aka member access - `a.b`) | left to right |
+| 18  | Invocations (aka calls - `a(...)`), array access (aka indexing - `a[...]`) | N/A |
+| 17  | [Postfix operators] `?` | N/A |
+| 16  | [Prefix operators] `!`, `&`, `&mut`, `-`, `*` | N/A |
+| 15  | `as` | left |
+| 14  | `*` `/` `%` | left |
+| 13  | `+` `-` | left |
+| 12  | `..` `..=` | Non-associative |
+| 11  | `<<` `>>` | left |
+| 10  | `&` (infix) | left |
+|  9  | `^` | left |
+|  8  | `∣` | left |
+|  7  | `in` | Non-associative |
+|  6  | `<=>` | Non-associative |
+|  5  | `<` `>` `<=` `=>` | Non-associative |
+|  4  | `==` `!=` | Non-associative |
+|  3  | `and` | left |
+|  2  | `or` | left |
+|  1  | `=` `+=` `-=` `*=` `/=` `%=` `&=` `∣=` `^=` `<<=` `>>=` | left |
 
 Prefix operators: `not`, `&` (borrow), `&mut` (borrow as mutable, `&` and `mut` can have whitespace between), `-` (negation), `*` (dereference).
 
