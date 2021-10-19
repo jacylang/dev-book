@@ -57,9 +57,13 @@ Most infix operators are left-associative.
 
 Prefix and postfix operators in _Jacy_ all have one precedence by groups: postfix is stronger than prefix operator.
 
-{:> Custom operators [future feature]:}
-> Is is planned to add custom operators in the future, likely it will be similar to how Swift does it.
-> Anyway, the first versions won't allow customizing operators.
+<details>
+  <summary>Custom operators [future feature]</summary>
+  <blockquote>
+    Is is planned to add custom operators in the future, likely it will be similar to how Swift does it.
+    Anyway, the first versions won't allow customizing operators.
+  </blockquote>
+</details>
 
 #### Operator precedence table
 
@@ -97,9 +101,13 @@ Prefix operators: `not`, `&` (borrow), `&mut` (borrow as mutable, `&` and `mut` 
 
 Postfix operators: `?` (optional chaining), `!` (unwrap).
 
-{:> Range operators precedence [why?]:}
-> Range operators have this kind of precedence as we want to write `a..b+1` which means `a..(b+1)`
-> as far as writing `a..b == c..d` which means `(a..b) == (c..d)`
+<details>
+  <summary>Range operators precedence [why?]</summary>
+  <blockquote>
+    Range operators have this kind of precedence as we want to write `a..b+1` which means `a..(b+1)`
+    as far as writing `a..b == c..d` which means `(a..b) == (c..d)`
+  </blockquote>
+</details>
 
 #### `not` prefix
 
@@ -134,9 +142,13 @@ Here you can see:
 - _Jacy_ requires semicolons as a statement terminator.
 - There's a `main` function, that is, the entry point of the program, as in many other compiled programming languages.
 
-{:> Optional semicolons :}
-> You may notice that in _Jacy_ semicolon is a required terminator for statements.
-> In the first version, it would be so, anyway semicolon inference would be one of the first updates in future versions though.
+<details>
+  <summary>Optional semicolons</summary>
+  <blockquote>
+    You may notice that in _Jacy_ semicolon is a required terminator for statements.
+    In the first version, it would be so, anyway semicolon inference would be one of the first updates in future versions though.
+  </blockquote>
+</details>
 
 As we already started with a function, let's talk about them right after the introduction to literals.
 
@@ -154,9 +166,13 @@ Primitive types in _Jacy_:
 - tuple type: `(T1, T2, T3, ...)`
 - array type: `[T; N]`
 
-{:> Type naming :}
-> Despite the names of primitive type, in _Jacy_, by convention, type names must begin with an upper-case letter.
-> Primitive type names are exceptions, you must use PascalCase (capitalized camelCase) for type names.
+<details>
+  <summary>Type naming</summary>
+  <blockquote>
+    Despite the names of primitive type, in _Jacy_, by convention, type names must begin with an upper-case letter.
+    Primitive type names are exceptions, you must use PascalCase (capitalized camelCase) for type names.
+  </blockquote>
+</details>
 
 #### Boolean
 
@@ -179,8 +195,12 @@ The types `int` and `uint` are platform-dependent types, in Rust, they are the s
 By default, integer literal is of type `int`.
 To create an integer literal of a specific type, you can use a type suffix same as a type name, e.g. for `u8` typed integer `123` you write `123u8`.
 
-{:> `i128` and `u128` :}
-> As you can see, there is no 128-bit sized integer type in _Jacy_ for now, by the way, they are in the future plan.
+<details>
+  <summary>`i128` and `u128`</summary>
+  <blockquote>
+    As you can see, there is no 128-bit sized integer type in _Jacy_ for now, by the way, they are in the future plan.
+  </blockquote>
+</details>
 
 #### Floating point types
 
@@ -188,8 +208,12 @@ For floating-point numbers, there're two types: `f32` and `f64` - 32-bit sized a
 
 Float literals support suffixes too as int's: `1.6783f32` or `55f64`.
 
-{:> `f128` :}
-> As 128-bit integers, `f128` is in the future plan.
+<details>
+  <summary>`f128`</summary>
+  <blockquote>
+    As 128-bit integers, `f128` is in the future plan.
+  </blockquote>
+</details>
 
 #### Slice type
 
