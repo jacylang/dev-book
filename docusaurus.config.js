@@ -38,6 +38,13 @@ const config = {
 
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     themeConfig: ({
+        // algolia: {
+        //     appId: 'BH4D9OD16A',
+        //     apiKey: '',
+        //     indexName: '',
+        //     contextualSearch: true,
+        //     searchParameters: {},
+        // },
         colorMode: {
             respectPrefersColorScheme: true,
             switchConfig: {
