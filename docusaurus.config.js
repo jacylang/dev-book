@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Jacy DevBook',
-    tagline: 'Sweet Home',
+    title: 'Jacy',
+    tagline: 'DevBook',
     url: 'https://jacylang.github.io',
     baseUrl: '/dev-book/',
     onBrokenLinks: 'throw',

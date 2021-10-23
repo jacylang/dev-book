@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
 .banner {
-    height: 100%;
+    height: 700px;
     padding: 4rem 0;
     text-align: center;
     position: relative;
@@ -20,16 +20,20 @@
 .header__title {
     width: max-content;
     margin: 0 auto;
-    padding: 5px;
-    color: #fff;
+    padding: 5px 50px;
+    color: #FAFAFF;
     font-family: "Courgette", cursive;
+    font-size: 50px;
     box-shadow: 0 1px #fffa;
+    font-weight: 100;
 }
 
 .header__tagline {
     width: max-content;
-    margin: 10px auto;
-    color: #fff;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 100;
+    color: #FAFAFF;
 }
 
 @media screen and (max-width: 966px) {
