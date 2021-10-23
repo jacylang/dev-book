@@ -2,40 +2,46 @@
 
 var theme = {
     plain: {
-        color: "#5C6166",
-        backgroundColor: "#FCFCFC"
+        color: '#5C6166',
+        backgroundColor: '#FCFCFC'
     },
     styles: [
         {
-            types: ["comment", "prolog", "doctype", "cdata"],
+            types: ['comment', 'prolog', 'doctype', 'cdata'],
             style: {
-                color: "#787B8099",
-                fontStyle: "italic"
-            }
+                color: '#787B8099',
+                fontStyle: 'italic'
+            },
         },
         {
-            types: ["namespace"],
+            types: ['namespace'],
             style: {
-                opacity: 0.7
-            }
+                opacity: 0.9
+            },
         },
         {
-            types: ["string", "attr-value"],
+            types: ['string', 'char', 'attr-value'],
             style: {
-                color: "#86B300"
-            }
+                color: '#86B300'
+            },
         },
         {
-            types: ["punctuation", "operator"],
+            types: ['attribute'],
             style: {
-                color: "#ED9366"
-            }
+                color: '#E6BA7E',
+            },
         },
         {
-            types: ["entity", "url", "symbol", "variable", "property"],
+            types: ['operator'],
             style: {
-                color: "#399EE6"
-            }
+                color: '#ED9366'
+            },
+        },
+        {
+            types: ['entity', 'url', 'symbol', 'variable', 'property'],
+            style: {
+                color: '#399EE6'
+            },
         },
         {
             types: ['regex'],
@@ -50,28 +56,28 @@ var theme = {
             },
         },
         {
-            types: ["atrule", "keyword", "attr-name", "selector"],
+            types: ['atrule', 'keyword', 'attr-name', 'selector'],
             style: {
-                color: "#FA8D3E"
-            }
+                color: '#FA8D3E'
+            },
         },
         {
-            types: ["function", "tag"],
+            types: ['function', 'tag'],
             style: {
-                color: "#F2AE49"
-            }
+                color: '#F2AE49'
+            },
         },
         {
-            types: ["function-variable"],
+            types: ['function-variable'],
             style: {
-                color: "#F2AE49"
-            }
+                color: '#F2AE49'
+            },
         },
         {
-            types: ["tag", "selector", "keyword"],
+            types: ['tag', 'selector', 'keyword'],
             style: {
-                color: "#E6BA7E"
-            }
+                color: '#E6BA7E'
+            },
         },
         {
             types: ['inserted'],

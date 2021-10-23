@@ -2,8 +2,8 @@
 
 var theme = {
     plain: {
-        color: "#5C6166",
-        backgroundColor: "#FCFCFC"
+        color: "#BFBDB6",
+        backgroundColor: "#0D1017"
     },
     styles: [
         {
@@ -16,7 +16,7 @@ var theme = {
         {
             types: ["namespace"],
             style: {
-                opacity: 0.7
+                opacity: 0.9
             }
         },
         {
@@ -26,7 +26,7 @@ var theme = {
             }
         },
         {
-            types: ["punctuation", "operator"],
+            types: ["operator"],
             style: {
                 color: "#F29668"
             }
