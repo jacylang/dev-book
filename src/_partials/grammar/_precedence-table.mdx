@@ -1,0 +1,41 @@
+This table shows which operators are stronger than others, associativity is marked as "left to right" for left-associative operators and "right to left" for right-associative operators.
+This table also includes expressions that are not operator expressions, anyway, it might be helpful to know that they are parsed assuming this figurative precedence.
+
+> Precedence index is placed just for some help, sometimes you need to know the order.
+
+The table is from high to low precedence ordered -- the operators in the first row have the strongest precedence.
+
+|  N  | Operator groups / expressions | Associativity |
+| --- | ----------------------------- | ------------- |
+| 20  | Paths (`::`) | N/A |
+| 19  | Field expression (aka member access - `a.b`) | left to right |
+| 18  | Invocations (aka calls - `a(...)`), array access (aka indexing - `a[...]`) | N/A |
+| 17  | [Postfix operators] `?` | N/A |
+| 16  | [Prefix operators] `!`, `&`, `&mut`, `-`, `*` | N/A |
+| 15  | `as` | left |
+| 14  | `*` `/` `%` | left |
+| 13  | `+` `-` | left |
+| 12  | `..` `..=` | Non-associative |
+| 11  | `<<` `>>` | left |
+| 10  | `&` (infix) | left |
+|  9  | `^` | left |
+|  8  | `∣` | left |
+|  7  | `in` | Non-associative |
+|  6  | `<=>` | Non-associative |
+|  5  | `<` `>` `<=` `=>` | Non-associative |
+|  4  | `==` `!=` | Non-associative |
+|  3  | `and` | left |
+|  2  | `or` | left |
+|  1  | `=` `+=` `-=` `*=` `/=` `%=` `&=` `∣=` `^=` `<<=` `>>=` | left |
+
+Prefix operators: `not`, `&` (borrow), `&mut` (borrow as mutable, `&` and `mut` can have whitespace between), `-` (negation), `*` (dereference).
+
+Postfix operators: `?` (optional chaining), `!` (unwrap).
+
+<details>
+  <summary>Range operators precedence [why?]</summary>
+  <blockquote>
+    Range operators have this kind of precedence as we want to write `a..b+1` which means `a..(b+1)`
+    as far as writing `a..b == c..d` which means `(a..b) == (c..d)`
+  </blockquote>
+</details>

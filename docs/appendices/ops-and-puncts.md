@@ -1,3 +1,7 @@
+---
+sidebar_position: 30
+---
+
 # Operators and punctuations
 
 Operators in _Jacy_ are not something internally special in comparison with
