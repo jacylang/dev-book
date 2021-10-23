@@ -47,6 +47,7 @@ const config = {
         },
         navbar: {
             title: 'Jacy DevBook',
+            hideOnScroll: true,
             logo: {
                 alt: 'My Site Logo',
                 src: 'img/logo.svg',
