@@ -36,7 +36,8 @@ const config = {
 
     plugins: ['docusaurus-plugin-sass'],
 
-    themeConfig: {
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    themeConfig: ({
         colorMode: {
             respectPrefersColorScheme: true,
             switchConfig: {
@@ -102,7 +103,7 @@ const config = {
             theme: lightCodeTheme,
             darkTheme: darkCodeTheme,
         },
-    },
+    }),
 };
 
 module.exports = config;
