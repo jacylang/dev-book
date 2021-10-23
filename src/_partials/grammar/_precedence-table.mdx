@@ -5,6 +5,8 @@ This table also includes expressions that are not operator expressions, anyway, 
 
 The table is from high to low precedence ordered -- the operators in the first row have the strongest precedence.
 
+> Non-Assoc means non-associative operator, i.e. it is not allowed to combine it with itself like so `a OP b OP c`
+
 |  N  | Operator groups / expressions | Associativity |
 | --- | ----------------------------- | ------------- |
 | 20  | Paths (`::`) | N/A |
@@ -15,15 +17,15 @@ The table is from high to low precedence ordered -- the operators in the first r
 | 15  | `as` | left |
 | 14  | `*` `/` `%` | left |
 | 13  | `+` `-` | left |
-| 12  | `..` `..=` | Non-associative |
+| 12  | `..` `..=` | non-assoc |
 | 11  | `<<` `>>` | left |
 | 10  | `&` (infix) | left |
 |  9  | `^` | left |
 |  8  | `∣` | left |
-|  7  | `in` | Non-associative |
-|  6  | `<=>` | Non-associative |
-|  5  | `<` `>` `<=` `=>` | Non-associative |
-|  4  | `==` `!=` | Non-associative |
+|  7  | `in` | non-assoc |
+|  6  | `<=>` | non-assoc |
+|  5  | `<` `>` `<=` `=>` | non-assoc |
+|  4  | `==` `!=` | non-assoc |
 |  3  | `and` | left |
 |  2  | `or` | left |
 |  1  | `=` `+=` `-=` `*=` `/=` `%=` `&=` `∣=` `^=` `<<=` `>>=` | left |
