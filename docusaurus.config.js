@@ -2,7 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('./src/theme/prism-ayu-light');
-const darkCodeTheme = require('./src/theme/prism-ayu-dark');
+const darkCodeTheme = require('./src/theme/prism-ayu-mirage');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {

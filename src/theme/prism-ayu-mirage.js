@@ -2,14 +2,14 @@
 
 var theme = {
     plain: {
-        color: '#5C6166',
-        backgroundColor: '#FCFCFC'
+        color: '#CCCAC2',
+        backgroundColor: '#242936'
     },
     styles: [
         {
             types: ['comment', 'prolog', 'doctype', 'cdata'],
             style: {
-                color: '#787B8099',
+                color: '#B8CFE680',
                 fontStyle: 'italic'
             },
         },
@@ -22,43 +22,37 @@ var theme = {
         {
             types: ['string', 'char', 'attr-value'],
             style: {
-                color: '#86B300'
+                color: '#D5FF80'
             },
         },
         {
             types: ['attribute'],
             style: {
-                color: '#E6BA7E',
-            },
-        },
-        {
-            types: ['tag'],
-            style: {
-                color: '#55B4D4',
+                color: '#FFDFB3',
             },
         },
         {
             types: ['operator'],
             style: {
-                color: '#ED9366'
+                color: '#F29E74'
             },
         },
         {
             types: ['entity', 'module-declaration', 'class-name', 'type-definition', 'url', 'symbol', 'variable', 'property'],
             style: {
-                color: '#399EE6'
+                color: '#73D0FF'
             },
         },
         {
             types: ['regex'],
             style: {
-                color: '#4CBF99',
+                color: '#95E6CB',
             },
         },
         {
             types: ['constant', 'number', 'boolean'],
             style: {
-                color: '#A37ACC'
+                color: '#DFBFFF'
             },
         },
         {
@@ -70,31 +64,37 @@ var theme = {
         {
             types: ['function', 'function-definition'],
             style: {
-                color: '#F2AE49'
+                color: '#FFD173'
             },
         },
         {
             types: ['function-variable'],
             style: {
-                color: '#F2AE49'
+                color: '#FFD173'
+            },
+        },
+        {
+            types: ['tag'],
+            style: {
+                color: '#5CCFE6',
             },
         },
         {
             types: ['selector', 'keyword'],
             style: {
-                color: '#FA8D3E'
+                color: '#FFAD66'
             },
         },
         {
             types: ['inserted'],
             style: {
-                color: '#6CBF43',
+                color: '#87D96C',
             },
         },
         {
             types: ['deleted'],
             style: {
-                color: '#FF7383',
+                color: '#F27983',
             },
         },
     ]
