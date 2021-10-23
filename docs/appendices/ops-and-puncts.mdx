@@ -77,25 +77,6 @@ all operators are overloadable.
 
 Precedence (from highest to lowest)
 
-| Symbols |
-| :-----: |
-| `a::b` |
-| `a.b` |
-| `a()` &nbsp; `a[]` |
-| `a?` |
-| `-a` &nbsp; `*a` &nbsp; `!a` &nbsp; `&a` &nbsp; `&mut a` |
-| `a as b` |
-| `a ** b` |
-| `a * b` &nbsp; `a / b` &nbsp; `a % b` |
-| `a + b` &nbsp; `a - b` |
-| `a << b` &nbsp; `a >> b` |
-| `a & b` |
-| `a ^ b` |
-| `a | b` |
-| `a == b` &nbsp; `a != b` &nbsp; `a === b` &nbsp; `a !== b` &nbsp; `a < b` &nbsp; `a > b` &nbsp; `a <= b` &nbsp; `a >= b` &nbsp; `<=>` |
-| `a and b` |
-| `a or b` |
-| `a..b` &nbsp; `a..` &nbsp; `..` &nbsp; `..=b` &nbsp; `..b` &nbsp; `a..=b` |
-| `a |> b` |
-| `a = b` &nbsp; `a += b` &nbsp; `a -= b` &nbsp; `a *= b` &nbsp; `a /= b` &nbsp; `a %= b` &nbsp; `a **= b` &nbsp; `a &= b` &nbsp; `a |= b` &nbsp; `a ^= b` &nbsp; `a <<= b` &nbsp; `a >>= b` |
-| `return a` &nbsp; `break a` &nbsp; `() -> {}` |
+import PrecedenceTable from '../../src/_partials/grammar/_precedence-table.mdx'
+
+<PrecedenceTable/>
