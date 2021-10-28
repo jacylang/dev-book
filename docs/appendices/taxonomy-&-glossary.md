@@ -1,3 +1,7 @@
+---
+sidebar_position: 40
+---
+
 # Taxonomy and glossary
 
 ## Permissions

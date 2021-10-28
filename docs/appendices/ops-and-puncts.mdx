@@ -1,3 +1,7 @@
+---
+sidebar_position: 30
+---
+
 # Operators and punctuations
 
 Operators in _Jacy_ are not something internally special in comparison with
@@ -18,7 +22,7 @@ all operators are overloadable.
 | `a and b` | N/A |
 | `!a` | `std::ops::Not` |
 | `a & b` | `std::ops::BitAnd` |
-| `a | b` | `std::ops::BitOr` |
+| `a ∣ b` | `std::ops::BitOr` |
 | `a << b` | `std::ops::Shl` |
 | `a >> b` | `std::ops::Shr` |
 | `a ^ b` | `std::ops::Xor` |
@@ -37,7 +41,7 @@ all operators are overloadable.
 | `a /= b` | `std::ops::DivAssign` |
 | `a %= b` | `std::ops::RemAssign` |
 | `a **= b` | `std::ops::PowAssign` |
-| `a |= b` | `std::ops::BitOrAssign` |
+| `a ∣= b` | `std::ops::BitOrAssign` |
 | `a &= b` | `std::ops::BitAndAssign` |
 | `a <<= b` | `std::ops::ShlAssign` |
 | `a >>= b` | `std::ops::ShrAssign` |
@@ -49,7 +53,7 @@ all operators are overloadable.
 | `*a` | `std::ops::Deref` |
 | `*a = b` | `std::ops::DerefMut` |
 | `&a` | N/A |
-| `a |> b` | N/A |
+| `a ∣> b` | N/A |
 
 * (\*) For the exponentiation operator, there can be a conflict with
   dereferencing operator `*`, to solve it you need to put white space between
@@ -61,37 +65,17 @@ all operators are overloadable.
 
 ## Punctuations
 
-| Punctuation | Usages |
+| Symbol | Usages |
 | :--- | :--- |
 | `:` | Type annotations in almost all constructions, function call argument name |
 | `->` | Function types, lambdas |
 | `;` | Statement terminator, body ignorance, item declaration |
 | `=>` | `match` arms |
-|  |  |
 
 ## Operators and punctuations precedence
 
 Precedence (from highest to lowest)
 
-| Symbols |
-| :-----: |
-| `a::b` |
-| `a.b` |
-| `a()` &nbsp; `a[]` |
-| `a?` |
-| `-a` &nbsp; `*a` &nbsp; `!a` &nbsp; `&a` &nbsp; `&mut a` |
-| `a as b` |
-| `a ** b` |
-| `a * b` &nbsp; `a / b` &nbsp; `a % b` |
-| `a + b` &nbsp; `a - b` |
-| `a << b` &nbsp; `a >> b` |
-| `a & b` |
-| `a ^ b` |
-| `a | b` |
-| `a == b` &nbsp; `a != b` &nbsp; `a === b` &nbsp; `a !== b` &nbsp; `a < b` &nbsp; `a > b` &nbsp; `a <= b` &nbsp; `a >= b` &nbsp; `<=>` |
-| `a and b` |
-| `a or b` |
-| `a..b` &nbsp; `a..` &nbsp; `..` &nbsp; `..=b` &nbsp; `..b` &nbsp; `a..=b` |
-| `a |> b` |
-| `a = b` &nbsp; `a += b` &nbsp; `a -= b` &nbsp; `a *= b` &nbsp; `a /= b` &nbsp; `a %= b` &nbsp; `a **= b` &nbsp; `a &= b` &nbsp; `a |= b` &nbsp; `a ^= b` &nbsp; `a <<= b` &nbsp; `a >>= b` |
-| `return a` &nbsp; `break a` &nbsp; `() -> {}` |
+import PrecedenceTable from '../../src/_partials/grammar/_precedence-table.mdx'
+
+<PrecedenceTable/>

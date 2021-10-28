@@ -1,3 +1,8 @@
+---
+title: Programming Language Checklist 😅
+sidebar_position: 50
+---
+
 # *Jacy* Programming language [checklist](https://www.mcmillen.dev/language_checklist.html)
 
 ```plaintext
