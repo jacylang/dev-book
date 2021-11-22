@@ -13,7 +13,7 @@ _Jacy_ is a small project, the reason I'm creating it is to learn compiler devel
 
 ## Lexical structure
 
-You can skip [Lexical structure] part and just move to [Intro](#intro).
+You can skip the [Lexical structure] part and just move to [Intro](#intro).
 
 _Jacy_ might be easy to read for users familiar with C-like syntax. Its syntax is influenced by Rust, Swift, and C++.
 Anyway, some things might be uncommon especially for users not coming from Rust, and I'll try to explain everything as clean as I can.
@@ -50,17 +50,17 @@ Prefix, infix, and postfix are about where an operator is placed: before, betwee
 
 Infix operators have some properties: precedence and associativity.
 
-Precedence is a strength of operator, for example, we all know that `a + b * c` is the same as `a + (b * c)`, as `*` operator in math is stronger than `+` operator.
+Precedence is a strength of operator, for example, we all know that `a + b * c` is the same as `a + (b * c)`, as `*` operator in math is stronger than the `+` operator.
 
 Associativity is about how operators with the same precedence are grouped, that is, if `+` operator is left-associative, then `a + b + c` is `(a + b) + c` and if it is right-associative then `a + (b + c)`.
-Most infix operators are left-associative.
+Most of the infix operators are left-associative.
 
 Prefix and postfix operators in _Jacy_ all have one precedence by groups: postfix is stronger than prefix operator.
 
 <details>
   <summary>Custom operators [future feature]</summary>
   <blockquote>
-    Is is planned to add custom operators in the future, likely it will be similar to how Swift does it.
+    Planned to add custom operators in the future, likely it will be similar to how Swift does it.
     Anyway, the first versions won't allow customizing operators.
   </blockquote>
 </details>

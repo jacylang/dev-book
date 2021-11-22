@@ -4,8 +4,8 @@ The parsing stage includes lexing and parsing, but lexer has a pretty straightfo
 
 What happens at this stage:
 
-<Mermaid chart={`
-    graph LR;
-    Source code --> Tokens;
-    Tokens --> AST;
-`}/>
+```mermaid
+flowchart LR;
+A[Source code] --> B[Tokens];
+B --> C[AST];
+```
