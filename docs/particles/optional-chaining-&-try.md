@@ -1,4 +1,4 @@
-# Optional Chaining and Try operator
+# Optional Chaining and the Try operator
 
 I want to have them all: optional-chaining, unwrap and try operators.
 **Rust** includes try operator `?` which is transformed into construction with `return` on "fail" case, though it is possible to use `and_then` as alternative to JS/C# `?.` operator (optional chaining).
@@ -17,4 +17,4 @@ I'd like to describe all the possible operators/ways to implement I see.
 | `?.` distinct operator (`.` is included in `?.`) |  |
 | `!` operator |  |
 | `&.` operator from Ruby (optional chaining, aka safe navigation) |  |
-| `??` | I 
+| `??` | I
