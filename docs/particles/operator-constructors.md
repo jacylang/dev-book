@@ -23,3 +23,6 @@ Which is lowered to something like that
 ```jc
 let a = std::ops::InitList(1, 2, 3);
 ```
+
+STOP!!!
+This idea is stupid, yes, it gives one more type of constructors which could be useful, anyway, it does not differ from raw constructors as also requires presence of variadic parameters feature.
