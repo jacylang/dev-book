@@ -6,6 +6,10 @@ For example, you cannot access a child node from the parent node directly, every
 The structure of HIR might seem to be confusing at first sight view, but it is not.
 The AST produced by the parser is flattened into the collection of maps, e.g. there's a map of all function bodies, and that's all the executable code we have. If we need to walk through all function bodies, now we don't need to descend into the AST nodes ignoring nodes that not are function bodies.
 
+## Identifiers
+
+
+
 ## Lowering
 
 Lowering is a process of converting some syntactically different structures to common structures.
