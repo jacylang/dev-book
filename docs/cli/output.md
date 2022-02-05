@@ -15,3 +15,7 @@ Some colors are hard-coded for specific identifiers:
 - FOSId: <span style="color: purple">#fos(0)</span>
 - HirId: <span style="color: green">#0</span><span style="color:blue">@0</span> (#DefId@Counter)
 - EID (aka Explanation Id, no color): EID(0)
+
+## Error syntax highlighting
+
+Yes, _Jacy_ compiler highlights the code where error was found. I've never seen such a thing (as I remember) in any compiler but have no clue why nobody (maybe some compilers do 🤷) does this.
