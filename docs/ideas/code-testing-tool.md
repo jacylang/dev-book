@@ -54,4 +54,9 @@ Span in _Jacy_ compiler stored as a position and length (meaning "from char C wi
 
 ### Collecting ascriptions
 
+1. We go through the whole file AST and collect comments which starts with `message:` and save them.
+2. If some of the comments have `@at` attribute, we set a specific span for them.
+3. If `@at` attribute only specifies by-char position, we set current line (line where at the end of which comment is placed) number for it.
+4. If `@at` has at least line number specified, we do nothing with it and then, at the check stage, look at it as "an error at line N"
+5. 
 
