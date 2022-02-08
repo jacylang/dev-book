@@ -8,12 +8,38 @@ The structure of HIR might seem to be confusing at first sight view, but it is n
 The AST produced by the parser is flattened into the collection of maps, e.g. there's a map of all function bodies, and that's all the executable code we have. If we need to walk through all function bodies, now we don't need to descend into the AST nodes ignoring nodes that not are function bodies.
 The thing that differs HIR from AST is that HIR is made for ✨programmers✨ but not just to represent user code, and the main point is that HIR is geared for type check.
 
-## About HIR structure
+## HIR structures and identifiers
 
-Being more flattened than AST, HIR is still mostly a tree. By the way, the main point of HIR is "Owners" and items they own, why do we need them? One thing to remember is that HIR should be suitable for type-check and other high-level checks, we likely to avoid going down by some tree instead of actually getting what we want for a specific check, e.g. to type-check all bodies
+### `HirId`
 
-## Identifiers
+The main identifier in HIR consisted of `owner` and `id`.
+`owner` is a definition id `DefId` we resolved at the previous stages of name resolution. It is, indeed, an **owner** of some nodes.
+`id` is an identifier unique per each `owner`.
 
+So, given an example of code:
+```jc
+mod m {
+    func foo {}
+}
+```
+
+After the name resolution stage we assign `Defid` to each item and get:
+```jc
+mod m { 
+    func foo {} /**/
+}
+```
+
+### `Body`
+
+The `Body` is a uniformed "something executable", by the fast the only thing the only item that contains executable code. It is used for `func`s bodies and constant values (the value of `const` item, but also `func` parameter default value, array size, etc.).
+All bodies are collected in a single `Party::bodies` structure, mapping `BodyId` to a specific `Body`. We don't store `Body`s right inside other nodes, but instead, their `BodyId`s which we can use to access bodies they identify.
+
+
+
+#### `BodyId`
+
+Nothing more than a distinct `HirId` identifier.
 
 
 ## Lowering
