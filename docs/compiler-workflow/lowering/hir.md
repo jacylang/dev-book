@@ -25,9 +25,15 @@ mod m {
 
 After the name resolution stage we assign `Defid` to each item and get:
 ```jc
-mod m { 
-    func foo {} /**/
+mod m { // DefId#1 
+    func foo {} // DefId#2
 }
+```
+
+> Identifiers here may differ but it does not really matter
+
+Then, after building HIR:
+```
 ```
 
 ### `Body`

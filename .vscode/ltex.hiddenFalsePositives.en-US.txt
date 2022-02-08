@@ -1,0 +1,1 @@
+{"rule":"THERE_RE_CONTRACTION_UNCOMMON","sentence":"^\\QThat is, the \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q loop iterates over data until there're some data, same for while and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
