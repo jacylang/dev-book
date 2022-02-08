@@ -10,8 +10,7 @@ The thing that differs HIR from AST is that HIR is made for ✨programmers✨ bu
 
 ## About HIR structure
 
-Being more flattened than AST, HIR is still mostly a tree. By the way, the main point of HIR is "Owners" and items they own, why do we need them?
-
+Being more flattened than AST, HIR is still mostly a tree. By the way, the main point of HIR is "Owners" and items they own, why do we need them? One thing to remember is that HIR should be suitable for type-check and other high-level checks, we likely to avoid going down by some tree instead of actually getting what we want for a specific check, e.g. to type-check all bodies
 
 ## Identifiers
 
