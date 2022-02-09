@@ -33,8 +33,16 @@ mod m { // DefId#1
 > Identifiers here may differ but it does not really matter
 
 Then, after building HIR:
+```jc
+Party: {
+    items: [
+        Func("foo"), // ItemId {DefId#2}
+        Mod("m", body: [ItemId {DefId#2}]), // ItemId {DefId#1}
+    ]
+}
 ```
-```
+
+This approximate structure shows that we don't store items right inside their parent nodes, but instead identifiers to them.
 
 ### `Body`
 
