@@ -25,6 +25,38 @@ I really don't like TOML 😐.
 
 Here, I'll use ANTLR4-like grammar as it is more readable than EBNF.
 
-```antlr4
 
+```g4
+grammar: JON;
+
+sep: '\n'+ | '\n'* ',' '\n'*;
+
+root: object_body | value;
+
+key: literal;
+
+value: ;
+
+literal
+    : STRING
+    | 'null'
+    | int
+    | float
+    | bool;
+
+key_value: key ':' value;
+
+object_body: value (sep key_value)* sep?;
+object: '{' object_body? '}';
+
+fragment STRING
+    : '\'' (~['\\\u0000-\u001F] | STR_ESC | ('\\\'')) '\''
+    | '\'' (~["\\\u0000-\u001F] | STR_ESC | ('\\\'')) '\'';
+
+fragment STR_ESC: '\\' ([\\/bnfrt]);
+
+fragment INT: [0-9]+;
+
+WS: [ \t\r]+ -> skip;
 ```
+
