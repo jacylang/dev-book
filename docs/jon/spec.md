@@ -129,8 +129,11 @@ fragment STRING
 
 fragment STR_ESC
     : '\\'
-    ( [\\/bnfrt]
-    | );
+    ( [\\/bnfrt0]
+    | OCT OCT OCT
+    | 'x' HEX HEX
+    | 'u' HEX HEX
+    | 'U' HEX HEX HEX HEX);
 
 fragment IDENTIFIER_START
     : [\p{L}]
