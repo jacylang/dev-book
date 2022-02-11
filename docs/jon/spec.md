@@ -64,19 +64,20 @@ I really don't like TOML 😐.
 
 ## Grammar
 
-Here, I'll use ANTLR4-like grammar as it is more readable than EBNF.
+Here, I'll use ANTLR4 grammar as it is more readable than EBNF.
 
 
 ```g4
 grammar: JON;
 
-sep: '\n'+ | '\n'* ',' '\n'*;
+opt_nls: '\n'*;
+sep: '\n'+ | opt_nls ',' opt_nls;
 
 root: object_body | value;
 
 key: literal;
 
-value: ;
+value: literal | object | array;
 
 literal
     : STRING
@@ -85,10 +86,12 @@ literal
     | float
     | bool;
 
-key_value: key ':' value;
+key_value: key opt_nls ':' opt_nls value;
 
-object_body: value (sep key_value)* sep?;
-object: '{' object_body? '}';
+object_body: key_value (sep key_value)* sep?;
+object: '{' opt_nls object_body? opt_nls '}';
+
+array: '[' (value (sep? value)*)? sep? ']';
 
 fragment STRING
     : '\'' (~['\\\u0000-\u001F] | STR_ESC | ('\\\'')) '\''
