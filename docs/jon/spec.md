@@ -13,6 +13,19 @@ Its goals are:
 
 Though this page is called "Specification", better think of it as of grammar description.
 
+## Why _JON_?
+
+Spoiler: No clear reasons, I just like creating "my" things.
+
+JSON is a very popular format used almost everywhere, so why do we need a different format?
+
+- It is more liberal than JSON but still obvious and simple
+- It is more human friendly but not that hard as YAML
+- It is more complex than JSON, in a good way 😇
+
+_JON_ was also made as an alternative to TOML, as _Jacy_ is similar to **Rust** that uses TOML.
+I don't really like TOML 😐.
+
 ## Basic properties
 
 - _JON_ is case-sensitive, it this rule is applied to keywords too
@@ -48,19 +61,6 @@ _JON_ does not support root type specification as JSON does, there's no root `{}
 ### Numeric data types
 
 There's no limit to Integer ("int" further) and Floating-point ("float" further) numbers, and is only specified by implementation.
-
-## Why _JON_?
-
-Spoiler: No clear reasons, I just like creating "my" things.
-
-JSON is a very popular format used almost everywhere, so why do we need a different format?
-
-- It is more liberal than JSON but still obvious and simple
-- It is more human friendly but not that hard as YAML
-- It is more complex than JSON, in a good way 😇
-
-_JON_ was also made as an alternative to TOML, as _Jacy_ is similar to **Rust** that uses TOML.
-I don't really like TOML 😐.
 
 ## Grammar
 
