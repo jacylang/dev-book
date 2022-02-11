@@ -60,7 +60,7 @@ JSON is a very popular format used almost everywhere, so why do we need a differ
 - It is more complex than JSON, in a good way 😇
 
 _JON_ was also made as an alternative to TOML, as _Jacy_ is similar to **Rust** that uses TOML.
-I really don't like TOML 😐.
+I don't really like TOML 😐.
 
 ## Grammar
 
@@ -70,37 +70,88 @@ Here, I'll use ANTLR4 grammar as it is more readable than EBNF.
 ```g4
 grammar: JON;
 
-opt_nls: '\n'*;
-sep: '\n'+ | opt_nls ',' opt_nls;
-
 root: object_body | value;
 
-key: literal;
+key: literal | IDENT;
+
+IDENT: IDENTIFIER_START IDENTIFIER_NEXT*;
 
 value: literal | object | array;
 
 literal
     : STRING
     | 'null'
-    | int
-    | float
+    | number
     | bool;
 
+number: int | float;
+
+int
+    : DEC_LIT
+    | '0' [xX] (HEX | US)* HEX (HEX | US)*
+    | '0' [bB] (BIN | US)* BIN (BIN | US)*
+    | '0' [oO] (OCT | US)* OCT (OCT | US)*;
+
+fragment DEC_LIT: '0' | DEC (DEC | US)*;
+
+float
+    : DEC_LIT EXP
+    | DEC_LIT '.' DEC_LIT EXP?
+    | SIGN? 'nan'
+    | SIGN? 'inf';
+
+fragment EXP: [eE] SIGN? (DEC | US)* DEC (DEC | US)*;
+
 key_value: key opt_nls ':' opt_nls value;
+
+opt_nls: NLs*;
+sep: '\n'+ | opt_nls ',' opt_nls;
 
 object_body: key_value (sep key_value)* sep?;
 object: '{' opt_nls object_body? opt_nls '}';
 
-array: '[' (value (sep? value)*)? sep? ']';
+array: '[' (value (sep? value)* sep?)? ']';
+
+fragment US: '_'
+
+fragment DEC: [0-9];
+fragment HEX: [0-9a-fA-F];
+fragment OCT: [0-7];
+fragment BIN: [01];
+
+fragment SIGN: '-' | '+';
 
 fragment STRING
     : '\'' (~['\\\u0000-\u001F] | STR_ESC | ('\\\'')) '\''
-    | '\'' (~["\\\u0000-\u001F] | STR_ESC | ('\\\'')) '\'';
+    | '"' (~["\\\u0000-\u001F] | STR_ESC | ('\\"')) '"'
+    | '\'\'\'' (~['\\\u0000-\u001F] | STR_ESC | ('\\\'')) '\'\'\''
+    | '"""' (~["\\\u0000-\u001F] | STR_ESC | ('\\"')) '"""';
 
-fragment STR_ESC: '\\' ([\\/bnfrt]);
+fragment STR_ESC
+    : '\\'
+    ( [\\/bnfrt]
+    | );
 
-fragment INT: [0-9]+;
+fragment IDENTIFIER_START
+    : [\p{L}]
+    | '_';
 
-WS: [ \t\r]+ -> skip;
+fragment IDENTIFIER_NEXT
+    : IDENTIFIER_START
+    | [\p{M}]
+    | [\p{N}]
+    | [\p{Pc}]
+    | '\u200C'
+    | '\u200D';
+
+fragment NL
+   : '\r\n'
+   | [\r\n\u2028\u2029]
+
+fragment MULTILINE_COMMENT: '/*' .*? '*/' -> skip;
+
+fragment SINGLE_LINE_COMMENT: '//' .*? '*/' -> skip;
+
+WS: [ \t\r\u00A0\uFEFF\u2003]+ -> skip;
 ```
 
