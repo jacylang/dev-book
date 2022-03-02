@@ -229,3 +229,17 @@ There're three solutions I see:
 
 The 1. solution sounds better for me as I assumed to implement function overloading in the future.
 If one day I'll 100% establish that _Jacy_ would never have function overloading -- 2. variant will be used.
+
+## Update 02.03.2022
+
+After reading how Swift does this, I got that it is (hopefully) possible to treat operators as a primary expression, like identifiers.
+
+I'm not sure if it is a conflict free grammar, so let's check if it is.
+Operator as primary expression is possible, obviously, only in expressions. But before parsing primary expressions we parse infix, prefix and postfix expressions, but none of theme are blocking this feature except prefix. Why? Operator as primary expression can only appear in form of a standalone operator, i.e. without left-hand and right-hand sides, and _Jacy_ (likely) having LL-only grammar would only have problems with prefix expression - when we see an operator, we cannot be sure if it is a standalone operator or a prefix expression.
+But (I hope) we can easily solve it as:
+1. See an operator
+2. Try to parse an expression. Of course by precedence of prefix operators, i.e. we don't start from top-level expression parser but with one which has higher precedence than prefix expressions - postfix expression.
+3. If we failed to parse an expression - save an erroneous prefix expression (not operator and error expression) 
+4. If there's nothing like an expression - we add primary expression consisting of a standalone operator.
+
+
