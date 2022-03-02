@@ -1,1 +1,2 @@
 {"rule":"THERE_RE_CONTRACTION_UNCOMMON","sentence":"^\\QThat is, the \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q loop iterates over data until there're some data, same for while and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"CLEAN_UP","sentence":"^\\QThat's bad, but that was a conscious decision, as syntax was at WIP stage, I didn't want to cleanup logic that\\E$"}
