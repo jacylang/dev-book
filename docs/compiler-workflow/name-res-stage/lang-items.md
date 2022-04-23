@@ -2,7 +2,7 @@
 
 Language item is a kind of item that isn't declared as user-defined but defined inside the compiler.
 Language items have these strict properties:
-- Language item must be defined only ones, i.e. if user tries to define its own language item there will be an error
+- Language item must be defined only ones, i.e. if user tries to define pers own language item there will be an error
 - All language items are known and aren't dynamically addable without compiler updates.
 
 
